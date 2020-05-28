@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validate :validate_username
   validates :username, presence: true, uniqueness: { case_sensitive: false }
 
-  has_many :dashboards
+  has_many :dashboards, dependent: :destroy
 
   def index
     @users = User.all
