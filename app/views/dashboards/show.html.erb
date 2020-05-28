@@ -17,6 +17,7 @@
   <strong>User:</strong>
   <%= @dashboard.user.username %>
 </p>
-
-<%= link_to 'Edit', edit_dashboard_path(@dashboard) %> |
-<%= link_to 'Back', dashboards_path %>
+<div class="btn-group">
+  <%= link_to 'Edit', edit_dashboard_path(@dashboard), class: "btn btn-info btn-sm"  %>
+  <%= link_to 'Back', dashboards_path, class: "btn btn-primary btn-sm" %>
+</div>

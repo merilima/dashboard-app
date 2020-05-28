@@ -19,3 +19,4 @@ require("channels")
 import "bootstrap";
 import "./src/application.scss";
 global.$ = jQuery;
+import "controllers"

@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-  before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
+  before_action :set_dashboard, only: [:show, :edit, :update, :destroy, :move]
   before_action :authenticate_user!
   # GET /dashboards
   # GET /dashboards.json
@@ -59,6 +59,11 @@ class DashboardsController < ApplicationController
       format.html { redirect_to dashboards_url, notice: 'Dashboard was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def move
+    @dashboard.insert_at(params[:position].to_i)
+    head :ok
   end
 
   private
