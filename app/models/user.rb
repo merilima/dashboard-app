@@ -8,6 +8,12 @@ class User < ApplicationRecord
   validate :validate_username
   validates :username, presence: true, uniqueness: { case_sensitive: false }
 
+  has_many :dashboards
+
+  def index
+    @users = User.all
+  end
+
   def login
     @login || self.username || self.email
   end

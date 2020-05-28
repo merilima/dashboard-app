@@ -1,0 +1,22 @@
+<p>
+  <strong>Title:</strong>
+  <%= @dashboard.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dashboard.description %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @dashboard.position %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @dashboard.user.username %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_path(@dashboard) %> |
+<%= link_to 'Back', dashboards_path %>
