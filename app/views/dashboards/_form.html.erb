@@ -1,6 +1,6 @@
 <%= form_with(model: dashboard, local: true) do |form| %>
 <% if dashboard.errors.any? %>
-<div id="error_explanation">
+<div id="error_explanation", style="font-size:20px; color:gray;" >
   <h2><%= pluralize(dashboard.errors.count, "error") %> prohibited this dashboard from being saved:</h2>
 
   <ul>
@@ -12,12 +12,12 @@
 <% end %>
 
 <div class="field">
-  <%= form.label :title %>
+  <%= form.label :title, style:"font-size:20px; font-weight: bold;" %>
   <%= form.text_field :title %>
 </div>
 
 <div class="field">
-  <%= form.label :description %>
+  <%= form.label :description, style:"font-size:20px; font-weight: bold;" %>
   <%= form.text_field :description %>
 </div>
 

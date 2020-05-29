@@ -1,7 +1,12 @@
-<h1>Editing Dashboard</h1>
+<div style="text-align: center">
+    <div style="display: inline-block; text-align: left;" class="card card-body mb-4">
+        <h1 style="-webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: gray;">Editing Dashboard</h1>
 
-<%= render 'form', dashboard: @dashboard %>
-<div class="btn-group">
-    <%= link_to 'Show', @dashboard, class: "btn btn-info btn-sm" %>
-    <%= link_to 'Back', dashboards_path, class: "btn btn-primary btn-sm"%>
+        <%= render 'form', dashboard: @dashboard %>
+        <div class="btn-group">
+            <%= link_to 'Show', @dashboard, class: "btn btn-info btn-sm" %>
+            <%= link_to 'Back', dashboards_path, class: "btn btn-primary btn-sm"%>
+        </div>
+    </div>
 </div>
